@@ -9,10 +9,6 @@ module rounding_fancy() {
       echo (iso_a, cos(iso_a), iso_l, iso_r);
       xmove(scraper_dim[2]+(scraper_dim[1]/2-scraper_dim[2])) zmove(iso_r-(scraper_dim[4] - scraper_dim[3])/2) {
         xrot(90) cyl(r=iso_r, h=scraper_dim[0]+0.1, $fn=1000);
-       // zmove(-iso_r+scraper_dim[3]*8) difference() {
-       //   cuboid([iso_r, scraper_dim[0]+0.2, scraper_dim[4]*2]);
-       //   zmove(scraper_dim[0]*16) yrot(90) cyl(r=scraper_dim[0]*16, h=iso_r+0.1, $fn=1000);
-       // }
       }
   }
 
@@ -25,5 +21,5 @@ module scraper() {
     }
   }   
 }
-//rounding_fancy();
+
 scraper();

@@ -1,6 +1,7 @@
 include <BOSL2/std.scad>
 
-scraper_dim = [50, 50, 35, 0.2, 2];
+// [width (y), length (x), slope_scraper_len, base_thick, whole_thick]
+scraper_dim = [50, 50, 35, 0.6, 4];
 
 module rounding_fancy() {
       iso_l = sqrt(pow((scraper_dim[4] - scraper_dim[3]), 2)+scraper_dim[2]*scraper_dim[2]);
